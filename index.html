@@ -3,51 +3,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meu primeiro site</title>
-        <style>
-            body {
-                background-color: black;
-                color: white;
-                font-family: Arial, Helvetica, sans-serif;
-                text-align: center;
-                padding-top: 50px;
-            }
-            
-            /* Estado inicial: escondido de verdade */
-            .escondido {
-                display: none !important;
-            }
-
-            .caixa-mensagem {
-                margin-top: 20px;
-                padding: 15px;
-                background-color: #222;
-                border: 2px solid #555;
-                display: inline-block;
-                border-radius: 8px;
-            }
-        </style>
+        <title>Document</title>
     </head>
     <body>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
 
-        <h1>Meu primeiro Site</h1>
-        <img src="https://tse3.mm.bing.net/th/id/OIP.1s9wUnOmlvsKyLfuHCbgdAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" width="400" alt="">
-        
-        <br><br>
-        
-        <button id="meuBotao">Clique aqui</button>
+    img {
+    border-radius: 50px; /* Arredonda os cantos. Quanto maior o número, mais redondo fica */
+}
+.escondido {
+    display: none;
+}
+.caixa-mensagem {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #222;
+    border: 2px solid #555;
+    border-radius: 8px;
 
-        <div id="mensagem" class="escondido caixa-mensagem">
-            <p>Oba! Você clicou no botão e a mágica aconteceu! 🚀</p>
-        </div>
+}
+.caixa-mensagem a:hover {
+    text-decoration: underline;
+    color: yellow;
 
-        <script>
-            const botao = document.getElementById('meuBotao');
-            const mensagem = document.getElementById('mensagem');
+}
 
-            botao.addEventListener('click', function() {
-                mensagem.classList.toggle('escondido');
-            });
-        </script>
-    </body>
-</html>
+</style>
+<h1>Desenvolvedor WEB.</h1>
+<img src="https://static.vecteezy.com/ti/vetor-gratis/p2/5862180-web-desenvolvedor-website-desenvolvimento-programador-trabalhando-no-computador-vetor.jpg" width="600" alt="">
+<br><br>
+<button id="meuBotao">Clique aqui!</button>
+<div id="mensagem" class="escondido caixa-mensagem">
+    <p>Crie o seu site do zero.</p>
+    <p>Quer ver meus códigos? Acesse:</p>
+    <a href="https://github.com/marcelooliveira8052668-cyber?tab=repositories" target="_blank">Meu GitHub</a>
+
+</div>
+<script>
+    const botao = document.getElementById('meuBotao')
+    const mensagem = document.getElementById('mensagem')
+
+    botao.addEventListener('click', function(){
+        mensagem.classList.toggle('escondido');
+
+    });
+</script>
+
+ </body>
+    </html>
+
+
